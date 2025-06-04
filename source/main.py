@@ -21,6 +21,7 @@ def main():
 
     obs = env.reset()
     done = False
+    info = {}
 
     while not done:
         avail_mask = env.legal_actions()

@@ -49,7 +49,7 @@ def parse_args(args=None) -> argparse.Namespace:
     group_general.add_argument(
         "--result_dir",
         type=str,
-        default=os.path.join(os.getcwd(), "results"),
+        default=os.path.join(os.getcwd(), "logs"),
         help="Directory to store results and logs (default: %(default)s)",
     )
     group_general.add_argument(
@@ -170,10 +170,3 @@ def parse_args(args=None) -> argparse.Namespace:
     )
 
     return parser.parse_args(args)
-
-
-if __name__ == "__main__":
-    cfg = parse_args()
-    print("===== Configuration =====")
-    for key, val in vars(cfg).items():
-        print(f"{key}: {val}")
